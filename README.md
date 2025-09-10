@@ -5,10 +5,10 @@ URL Source: https://theghub.org/wiki/PyBetToolsUserGuide
 Table of contents
 -----------------
 
-*   [1. Introduction](https://theghub.org/wiki/PyBetToolsUserGuide#intro)
-    *   [1.1 PyBetVH](https://theghub.org/wiki/PyBetToolsUserGuide#pybetvh)
-    *   [1.2 PyBetEF](https://theghub.org/wiki/PyBetToolsUserGuide#pybetef)
-    *   [1.3 PyBetUnrest](https://theghub.org/wiki/PyBetToolsUserGuide#pybetunrest)
+*   [1. Introduction](#1-introduction)
+    *   [1.1 PyBetVH](#11-pybetvh)
+    *   [1.2 PyBetEF](#12-pybetef)
+    *   [1.3 PyBetUnrest](#13-pybetunrest)
 
 *   [2. Background Theory](https://theghub.org/wiki/PyBetToolsUserGuide#background)
     *   [2.1 Bayesian Inference](https://theghub.org/wiki/PyBetToolsUserGuide#bayesian)
@@ -452,4 +452,5 @@ Created on 20 Oct 2015, Last modified on 01 Dec 2015
 8.   [PyBetUnrest](https://theghub.org/tags/pybetunrest)
 9.   [pybetvh](https://theghub.org/tags/pybetvh)
 10.   [short term forecasting](https://theghub.org/tags/shorttermforecasting)
+
 
