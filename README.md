@@ -1,8 +1,7 @@
-Title: Wiki: PyBet Tools User Guide
+# PyBet Tools User Guide
 
 URL Source: https://theghub.org/wiki/PyBetToolsUserGuide
 
-Markdown Content:
 Table of contents
 -----------------
 
@@ -32,7 +31,8 @@ Table of contents
 *   [Disclaimer](https://theghub.org/wiki/PyBetToolsUserGuide#disclaimer)
 *   [References](https://theghub.org/wiki/PyBetToolsUserGuide#ref)
 
-1. Introduction
+
+## 1. Introduction
 ---------------
 
 BET models are a set of probabilistic tools aiming to provide probabilistic estimation of volcanic unrest, of eruption, and of any hazardous phenomena linked to volcanic activity. For this reason, they can be used for probabilistic forecasting during crisis of unrest (short-term) and/or more comprehensive probabilistic volcanic hazard assessments (PVHA). The background theory of these models is based on the definition of ad-hoc Bayesian event trees, where each node is treated through a Bayesian inference approach. This approach allows to merge together different kind of available information, as theoretical/empirical models, a-priori beliefs, past data and monitoring data (the latter for short-term analysis).
@@ -41,7 +41,7 @@ Here we present some of the current software implementations of these models, wi
 
 More details on the BET’s models background theory can be found in literature (among others see Marzocchi et al., 2004; Marzocchi et al., 2008, Marzocchi et al., 2010) and are out of the scope of this document. However, some basic principles will be briefly introduced in the [next section 2](https://theghub.org/wiki/PyBetToolsUserGuide#background), in order to properly approach the use of the corresponding tools.
 
-1.1 PyBetVH
+### 1.1 PyBetVH
 -----------
 
 [PyBetVH](https://vhub.org/resources/betvh) is a completely new, free, open-source and cross-platform software implementation of the Bayesian Event Tree for Volcanic Hazard (BET_VH). The purpose of the tool is to provide a graphical support to BET_VH model, which estimates the long-term probability of any magmatic hazardous phenomenon (i.e., lava flows, tephra fall, pyroclastic flows, lahars, etc.) occurring in a selected time frame, accounting for all the uncertainties. The BET_VH model represents a flexible tool to provide probabilities of any specific event at which we are interested in, by merging all the available information, such as theoretical models, a priori beliefs, and past data. It is mainly based on the Bayesian inference and it deals with long-term forecasting only, therefore it can be useful in land use planning. More details can be found in Marzocchi et al. (2010) and it has been used in several applications (Selva et al., 2010; Sandri et al., 2012; Sandri et al., 2014; Thompson et al., 2015; Tonini et al., 2015b)
@@ -50,19 +50,19 @@ More details on the BET’s models background theory can be found in literature 
 
 More details on [PyBetVH](https://vhub.org/resources/betvh) tool can be found in Tonini et al. (2015a), where the use of the tool is illustrated through the example of PVHA for tephra fallout from the Okataina Volcanic Centre (OVC), New Zealand, by highlight the range of outputs that the tool can generate.
 
-1.2 PyBetEF
+### 1.2 PyBetEF
 -----------
 
 PyBetEF is an open and cross-platform implementation of BET_EF (Bayesian Event Tree for Eruption Forecasting) equipped with a Graphical User Interface. BET_EF model aims to provide probabilities of unrest/eruption forecasting of magmatic events, by merging all the relevant available information such as theoretical models, a priori beliefs, monitoring measures, and any kind of past data. BET_EF is based on a Bayesian procedure and it relies on the fuzzy approach to manage monitoring data. The method deals with short- and long-term forecasting; therefore, it can be useful in many practical aspects such as land use planning and volcanic emergencies (Marzocchi et al., 2008). BET_EF model has been applied to several volcanic systems (Marzocchi et al., 2008; Sandri et al., 2012; Selva et al., 2012a; Selva et al., 2012b). **NOTE:** PyBetEF is not maintained anymore, since it has been included
 
-1.3 PyBetUnrest
+### 1.3 PyBetUnrest
 ---------------
 
 [PyBetUnrest](https://vhub.org/resources/betunrest) is an open and cross-platform implementation of BET_UNREST model. BET_UNREST is an extension of BET_EF including non-magmatic volcanic unrest and its relating hazardous phenomena, by adding a specific branch to the event tree (Rouwet et al., 2014). It has been designed and developed as one of the final products of the EU VUELCO project and tested during the last volcanic crisis simulation organized in Dominica (West Indies) in the frame of VUELCO (Sandri et al., Under review).
 
 More details on [PyBetUnrest](https://vhub.org/resources/betunrest) tool can be found in Tonini et al. (2016), where the use of the tool is illustrated through an application to available knowledge and datasets of the Kawah Ijen stratovolcano, Indonesia. In particular, the tool is set on the basis of monitoring data for the learning period 2000–2010, and is then blindly applied to the test period 2010–2012, during which significant unrest phases occurred.
 
-2. Background Theory
+## 2. Background Theory
 --------------------
 
 The main concepts behind BET models are the definition of an event tree (ET, hereafter) and the use of the Bayesian inference. ET is a tree graph representation of events in which individual branches are alternative steps from a general prior event, state, or condition through increasingly specific subsequent events (intermediate outcomes) to final outcomes (see Figure 1). In this way, an ET shows all relevant possible outcomes of volcanic unrest at progressively higher degrees of detail. The branches at each node represent different possible events, although these need not be mutually exclusive or exhaustive. The Bayesian approach is used at the different nodes to merge theoretical models of the eruptive process, past (historical and geological) data, and, for short-term forecasting, data from monitoring of the volcano. Thus it allows to formally account for both aleatoric (due to the intrinsic randomness of the system) and epistemic (due to limited data or knowledge) uncertainties. Through the ET, one can calculate both absolute and conditional probability. This corresponds to consider the selected full path or just a single node in the ET itself.
@@ -71,7 +71,7 @@ The main concepts behind BET models are the definition of an event tree (ET, her
 
 **Figure 1:** Example of event tree as designed after Marzocchiet al. (2004) for Mount Vesuvius.
 
-2.1 Bayesian Inference
+### 2.1 Bayesian Inference
 ----------------------
 
 The Bayesian methodology allows to include a formal probabilistic treatment of the available data and their uncertainties and each node of the event tree is represented by a probability density function (pdf) of the probability at the node. Each node is assigned a probability by means of a Bayesian approach, meaning that a prior probability distribution (usually coming from theoretical models) and information from past data are statistically combined together to obtain a posterior probability. Quantities are estimated by considering all the available information (analytical/empirical models, expert beliefs, data) as described in the following formulation (see also Figure 2):
@@ -96,7 +96,7 @@ The nature of the Bayesian analysis procedure can be summarized by the following
 2.    If the prior is informative, the posterior is a mixture of the prior and the data 
 3.    The more informative the prior, the more data you need to change your beliefs 
 
-2.2 Monitoring
+### 2.2 Monitoring
 --------------
 
 Monitoring data are accounted by identifying all the monitored parameters that can provide information about a degree of anomaly at each node of the ET. The identification of anomalies is where volcanologists introduce their conceptual models about the pre-eruptive process. The degrees of anomaly of each measure is computed in two ways (see Figure 3 here below): the parameter’s anomaly can be defined as binary (exceedance of one threshold), as shown in the left panel of Figure 3, or through a fuzzy approach (by defining two thresholds), as shown in the right panel of Figure 3.
@@ -131,7 +131,7 @@ The parameter a and b can be defined for any volcanic systems, since their meani
 
 The value of P calculated by equation (*) is the mean of a Beta distribution. The variance of the distribution is set by the parameter **Λ** that is the **equivalent number of data**. The **equivalent number of data** mimics how much we believe to the conceptual model that stands behind the choice of the anomalies. In other words, if we set Λ=5 we think that our model has the same credibility that we can get from a probability calculated from 5 data. Of course the larger Λ , the higher the confidence on the model.
 
-3. Local Installation Requirements
+## 3. Local Installation Requirements
 ----------------------------------
 
 All PyBet tools require Python and some Python third party modules/libraries which need to be installed in order to be able to run the tools. The first step is to check if the Python interpreter is installed. By typing “python” in a terminal window followed by the Enter key, the prompt should give a similar response:
@@ -151,7 +151,7 @@ The required additional modules/libraries are:
 
 All of them are open source and freely available and usable for all the most common operating systems (Linux, Mac OSX and Windows). Depending on the operating system and on the experience of the user in using its machine and/or Python, the procedure to install these libraries can be approached in different ways. **NOTE:** The current versions of all BET tools run on Python 2.7.x. The porting to Python 3.x.x is on the way.
 
-3.1 Linux
+### 3.1 Linux
 ---------
 
 In the majority of Linux distributions, Python libraries can be easily installed by means of their own package managers, which install, update, remove softwares in the system in a consistent manner, by checking for all the required dependencies and shared libraries. For Debian-like distributions, you can use the synaptic tool or simply the following command from the terminal:
@@ -160,7 +160,7 @@ sudo apt-get install python-numpy python-matplotlib python-wxgtk3.0 python-pil
 
 The procedure for other distributions is very similar.
 
-3.2 Mac OSX/Windows
+### 3.2 Mac OSX/Windows
 -------------------
 
 Both these operating systems do not have a native package manager to handle libraries and softwares in a smart way as Linux distribution, so the installation of Python libraries could not be so straightforward. One can download and install the single libraries from the respective web sites, being very careful to the Python Standard Library version installed on his/her own computer as reference to choose the correct files. Moreover, Mac OSX users can try to use [MacPorts](https://theghub.org/wiki/MacPorts) ([https://www.macports.org/](https://www.macports.org/)) or Homebrew ([http://brew.sh/](http://brew.sh/)), depending on their own expertise in using these tools, which should play as package managers similarly to the ones available for Linux systems. Alternatively, as easiest way, one can install the Enthought Canopy free version [https://store.enthought.com](https://store.enthought.com/). Canopy is a very rich Python package distribution, which will install a scientific Python environment in your system. It is less flexible, but more solid and it takes care of the compatibility among all the libraries. Once you have installed Canopy (as any other software in your own operating system), one should set the Canopy Python environment as the default Python. Official instruction can be found for [Windows](http://docs.enthought.com/canopy/quick-start/install_windows.html) and [Mac OSX](http://docs.enthought.com/canopy/quick-start/install_macos.html).
@@ -177,7 +177,7 @@ Enthought Canopy Python 2.7.9 | 64-bit | (default, Jun 30 2015, 19:41:21)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 
-3.3 Requirements verification
+### 3.3 Requirements verification
 -----------------------------
 
 Independently on the operating system you are using and on the method used to install these Python libraries, their correct installation can be verified by entering in the Python interactive shell and manually importing the libraries:
@@ -193,10 +193,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 If the previous requirements are satisfied, you can proceed with the installation of the tool(s) on your system.
 
-4. Running the tools
+## 4. Running the tools
 --------------------
 
-4.1 PyBetVH
+### 4.1 PyBetVH
 -----------
 
 Download the source code from the [PyBetVH](http://vhub.org/resources/betvh) main page on the VHub web site (Download does not require to be registered users). Under the launch tool button on the right, by clicking on download, it will be asked to save a compressed file (betvh-rxxx.tar.gz). The archive must be placed in a folder where the user has full permissions (reading, writing and executing) on files. This will be the installation folder of [PyBetVH](http://vhub.org/resources/betvh) and should not be moved anymore. After having extracted the files from the tar.gz file, the following folder tree structure should appear:
@@ -234,7 +234,7 @@ Finally, if all the operations above have been successfully concluded, the tool 
 
 rob@robelix:~$ PyBetVH
 
-4.2 PyBetEF
+### 4.2 PyBetEF
 -----------
 
 PyBetEF is not yet installed on VHub. You can download it from [here](https://www.dropbox.com/s/oc4e3lrvjw84qoz/PyBetEF.zip?dl=0) together with a working [example](https://www.dropbox.com/s/2d1bjhcgfhyou86/FakeVolcano.zip?dl=0). Uncompress the .zip file and place the whole folder where you prefer. The folder contains the PyBetEF main program and all the modules needed to be properly executed. The user should not modify, remove or do any change to this folder, since the risk is to compromise the functionality of the tool. The tool is ready to be launched for a first trial. Open a terminal and move inside the folder containing the PyBetEF source files:
@@ -258,22 +258,22 @@ In Windows one can create a link (i.e., on the Desktop) by clicking with the mou
 
 In order to run the [example](https://www.dropbox.com/s/2d1bjhcgfhyou86/FakeVolcano.zip?dl=0), you have to unzip the file and place the FakeVolcano folder wherever in your file system. The folder contains the input files to run PyBetEF. Instructions on how to prepare the input files are given in [Input preparation](https://theghub.org/wiki/PyBetToolsUserGuide#input) section. The next step is to launch the tool, click on Load Volcano button in the upper left panel and select the FakeVolcano folder. If everything went fine, the event tree defined for this example is loaded in the lower left panel and the user can explore it by clicking on the nodes. Once the desired node is selected, the user can press the COMPUTE button on the lower right panel. A new window frame will be opened, visualizing the corresponding output.
 
-4.3 PyBetUnrest
+### 4.3 PyBetUnrest
 ---------------
 
 The procedure is the same shown in 3.1 for PyBetVH
 
-5. Input preparation
+## 5. Input preparation
 --------------------
 
 Input to feed PyBet tools consists in a set of text files organized in a main folder representing the volcano in which the user is interested in. The main input information is driven by a configuration file called pybet.cfg, which must always exist in order to run the codes. This file is a simple text file in which the user can input the general information about the volcano, and must be formatted as shown in the example below. The user should not change the names of the various blocks (identified by square brackets) and neither the field tags that are to the left of the sign ‘=’, but only fill in the spaces on its right (for instance, in the block “Main Settings”, the tag “volcano name” is the variable name and cannot be changed, while on the right the user can set the values for the desired case study).
 
-5.1 PyBetVH
+### 5.1 PyBetVH
 -----------
 
 Many details on input preparation to [PyBetVH](http://vhub.org/resources/betvh) can be found in [Tonini et al. (2015)](http://www.sciencedirect.com/science/article/pii/S0098300415000515) main paper and in the relating supplementary material.
 
-5.2 PyBetEF
+### 5.2 PyBetEF
 -----------
 
 Example of _pybet.cfg_
@@ -452,3 +452,4 @@ Created on 20 Oct 2015, Last modified on 01 Dec 2015
 8.   [PyBetUnrest](https://theghub.org/tags/pybetunrest)
 9.   [pybetvh](https://theghub.org/tags/pybetvh)
 10.   [short term forecasting](https://theghub.org/tags/shorttermforecasting)
+
