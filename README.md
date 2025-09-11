@@ -1,6 +1,6 @@
 # PyBet Tools User Guide
 
-URL Source: https://theghub.org/wiki/PyBetToolsUserGuide
+URL Source (Created on 20 Oct 2015, Last modified on 01 Dec 2015): https://theghub.org/wiki/PyBetToolsUserGuide
 
 Table of contents
 -----------------
@@ -10,26 +10,26 @@ Table of contents
     *   [1.2 PyBetEF](#12-pybetef)
     *   [1.3 PyBetUnrest](#13-pybetunrest)
 
-*   [2. Background Theory](https://theghub.org/wiki/PyBetToolsUserGuide#background)
-    *   [2.1 Bayesian Inference](https://theghub.org/wiki/PyBetToolsUserGuide#bayesian)
-    *   [2.2 Monitoring](https://theghub.org/wiki/PyBetToolsUserGuide#monitoring)
+*   [2. Background Theory](#2-background)
+    *   [2.1 Bayesian Inference](#21-bayesian)
+    *   [2.2 Monitoring](#22-monitoring)
 
-*   [3. Local Installation Requirements](https://theghub.org/wiki/PyBetToolsUserGuide#installation)
-    *   [3.1 Linux](https://theghub.org/wiki/PyBetToolsUserGuide#linux)
-    *   [3.2 Mac OSX/Windows](https://theghub.org/wiki/PyBetToolsUserGuide#macwin)
-    *   [3.3 Requirements verification](https://theghub.org/wiki/PyBetToolsUserGuide#requirements)
+*   [3. Local Installation Requirements](#3-installation)
+    *   [3.1 Linux](#31-linux)
+    *   [3.2 Mac OSX/Windows](#32-macwin)
+    *   [3.3 Requirements verification](#33-requirements)
 
-*   [4. Running the tools](https://theghub.org/wiki/PyBetToolsUserGuide#running)
-    *   [4.1 PyBetVH](https://theghub.org/wiki/PyBetToolsUserGuide#runpybetvh)
-    *   [4.2 PyBetEF](https://theghub.org/wiki/PyBetToolsUserGuide#runpybetef)
-    *   [4.3 PyBetUnrest](https://theghub.org/wiki/PyBetToolsUserGuide#runpybetunrest)
+*   [4. Running the tools](#4-running)
+    *   [4.1 PyBetVH](#41-runpybetvh)
+    *   [4.2 PyBetEF](#42-runpybetef)
+    *   [4.3 PyBetUnrest](#43-runpybetunrest)
 
-*   [5. Input preparation](https://theghub.org/wiki/PyBetToolsUserGuide#input)
-    *   [5.1 PyBetVH](https://theghub.org/wiki/PyBetToolsUserGuide#inputvh)
-    *   [5.2 PyBetEF](https://theghub.org/wiki/PyBetToolsUserGuide#inputef)
+*   [5. Input preparation](#5-input)
+    *   [5.1 PyBetVH](#51-inputvh)
+    *   [5.2 PyBetEF](#52-inputef)
 
-*   [Disclaimer](https://theghub.org/wiki/PyBetToolsUserGuide#disclaimer)
-*   [References](https://theghub.org/wiki/PyBetToolsUserGuide#ref)
+*   [Disclaimer](#disclaimer)
+*   [References](#references)
 
 
 ## 1. Introduction
@@ -39,16 +39,16 @@ BET models are a set of probabilistic tools aiming to provide probabilistic esti
 
 Here we present some of the current software implementations of these models, with the specific goal of providing a user-friendly interface to the final users. The softwares have been developed by using the Python programming language, since the broad compatibility of Python allows to install them on all the most common operating systems (Linux, Mac OSX, Windows) and also on the [VHub](https://vhub.org/) cyber-infrastructure, where they can be freely run online or downloaded. In the next sub-sections they are briefly introduced.
 
-More details on the BET’s models background theory can be found in literature (among others see Marzocchi et al., 2004; Marzocchi et al., 2008, Marzocchi et al., 2010) and are out of the scope of this document. However, some basic principles will be briefly introduced in the [next section 2](https://theghub.org/wiki/PyBetToolsUserGuide#background), in order to properly approach the use of the corresponding tools.
+More details on the BET’s models background theory can be found in literature (among others see Marzocchi et al., 2004; Marzocchi et al., 2008, Marzocchi et al., 2010) and are out of the scope of this document. However, some basic principles will be briefly introduced in the [next section 2](#background), in order to properly approach the use of the corresponding tools.
 
 ### 1.1 PyBetVH
 -----------
 
-[PyBetVH](https://vhub.org/resources/betvh) is a completely new, free, open-source and cross-platform software implementation of the Bayesian Event Tree for Volcanic Hazard (BET_VH). The purpose of the tool is to provide a graphical support to BET_VH model, which estimates the long-term probability of any magmatic hazardous phenomenon (i.e., lava flows, tephra fall, pyroclastic flows, lahars, etc.) occurring in a selected time frame, accounting for all the uncertainties. The BET_VH model represents a flexible tool to provide probabilities of any specific event at which we are interested in, by merging all the available information, such as theoretical models, a priori beliefs, and past data. It is mainly based on the Bayesian inference and it deals with long-term forecasting only, therefore it can be useful in land use planning. More details can be found in Marzocchi et al. (2010) and it has been used in several applications (Selva et al., 2010; Sandri et al., 2012; Sandri et al., 2014; Thompson et al., 2015; Tonini et al., 2015b)
+[PyBetVH](https://github.com/INGV/PyBetVH) is a completely new, free, open-source and cross-platform software implementation of the Bayesian Event Tree for Volcanic Hazard (BET_VH). The purpose of the tool is to provide a graphical support to BET_VH model, which estimates the long-term probability of any magmatic hazardous phenomenon (i.e., lava flows, tephra fall, pyroclastic flows, lahars, etc.) occurring in a selected time frame, accounting for all the uncertainties. The BET_VH model represents a flexible tool to provide probabilities of any specific event at which we are interested in, by merging all the available information, such as theoretical models, a priori beliefs, and past data. It is mainly based on the Bayesian inference and it deals with long-term forecasting only, therefore it can be useful in land use planning. More details can be found in Marzocchi et al. (2010) and it has been used in several applications (Selva et al., 2010; Sandri et al., 2012; Sandri et al., 2014; Thompson et al., 2015; Tonini et al., 2015b)
 
-[PyBetVH](https://vhub.org/resources/betvh) calculates hazard curves, which describe the distribution of the exceedance probability as a function of a user-selected intensity measure (e.g., tephra load) on a grid of points covering the target area. The computed hazard curves are (i) absolute (accounting for the probability of eruption in a given time frame, and for all the possible vent locations and eruptive sizes) and (ii) Bayesian (computed at different percentiles, in order to quantify the epistemic uncertainty). Such curves allow representation of the full information resulting from PVHA, and are well suited to become a main input to quantitative risk analyses. [PyBetVH](https://vhub.org/resources/betvh) allows for interactive visualization of both the computed hazard curves, and the corresponding Bayesian hazard/probability maps. [PyBetVH](https://vhub.org/resources/betvh) is designed to minimize the efforts of end users, making PVHA results accessible to people who may be less experienced in probabilistic methodologies, e.g. decision makers.
+[PyBetVH](https://github.com/INGV/PyBetVH) calculates hazard curves, which describe the distribution of the exceedance probability as a function of a user-selected intensity measure (e.g., tephra load) on a grid of points covering the target area. The computed hazard curves are (i) absolute (accounting for the probability of eruption in a given time frame, and for all the possible vent locations and eruptive sizes) and (ii) Bayesian (computed at different percentiles, in order to quantify the epistemic uncertainty). Such curves allow representation of the full information resulting from PVHA, and are well suited to become a main input to quantitative risk analyses. [PyBetVH](https://github.com/INGV/PyBetVH) allows for interactive visualization of both the computed hazard curves, and the corresponding Bayesian hazard/probability maps. [PyBetVH](https://github.com/INGV/PyBetVH) is designed to minimize the efforts of end users, making PVHA results accessible to people who may be less experienced in probabilistic methodologies, e.g. decision makers.
 
-More details on [PyBetVH](https://vhub.org/resources/betvh) tool can be found in Tonini et al. (2015a), where the use of the tool is illustrated through the example of PVHA for tephra fallout from the Okataina Volcanic Centre (OVC), New Zealand, by highlight the range of outputs that the tool can generate.
+More details on [PyBetVH](https://github.com/INGV/PyBetVH) tool can be found in Tonini et al. (2015a), where the use of the tool is illustrated through the example of PVHA for tephra fallout from the Okataina Volcanic Centre (OVC), New Zealand, by highlight the range of outputs that the tool can generate.
 
 ### 1.2 PyBetEF
 -----------
@@ -58,9 +58,9 @@ PyBetEF is an open and cross-platform implementation of BET_EF (Bayesian Event T
 ### 1.3 PyBetUnrest
 ---------------
 
-[PyBetUnrest](https://vhub.org/resources/betunrest) is an open and cross-platform implementation of BET_UNREST model. BET_UNREST is an extension of BET_EF including non-magmatic volcanic unrest and its relating hazardous phenomena, by adding a specific branch to the event tree (Rouwet et al., 2014). It has been designed and developed as one of the final products of the EU VUELCO project and tested during the last volcanic crisis simulation organized in Dominica (West Indies) in the frame of VUELCO (Sandri et al., Under review).
+[PyBetUnrest](https://github.com/INGV/PyBetUnrest) is an open and cross-platform implementation of BET_UNREST model. BET_UNREST is an extension of BET_EF including non-magmatic volcanic unrest and its relating hazardous phenomena, by adding a specific branch to the event tree (Rouwet et al., 2014). It has been designed and developed as one of the final products of the EU VUELCO project and tested during the last volcanic crisis simulation organized in Dominica (West Indies) in the frame of VUELCO (Sandri et al., Under review).
 
-More details on [PyBetUnrest](https://vhub.org/resources/betunrest) tool can be found in Tonini et al. (2016), where the use of the tool is illustrated through an application to available knowledge and datasets of the Kawah Ijen stratovolcano, Indonesia. In particular, the tool is set on the basis of monitoring data for the learning period 2000–2010, and is then blindly applied to the test period 2010–2012, during which significant unrest phases occurred.
+More details on [PyBetUnrest](https://github.com/INGV/PyBetUnrest) tool can be found in Tonini et al. (2016), where the use of the tool is illustrated through an application to available knowledge and datasets of the Kawah Ijen stratovolcano, Indonesia. In particular, the tool is set on the basis of monitoring data for the learning period 2000–2010, and is then blindly applied to the test period 2010–2012, during which significant unrest phases occurred.
 
 ## 2. Background Theory
 --------------------
@@ -199,7 +199,7 @@ If the previous requirements are satisfied, you can proceed with the installatio
 ### 4.1 PyBetVH
 -----------
 
-Download the source code from the [PyBetVH](http://vhub.org/resources/betvh) main page on the VHub web site (Download does not require to be registered users). Under the launch tool button on the right, by clicking on download, it will be asked to save a compressed file (betvh-rxxx.tar.gz). The archive must be placed in a folder where the user has full permissions (reading, writing and executing) on files. This will be the installation folder of [PyBetVH](http://vhub.org/resources/betvh) and should not be moved anymore. After having extracted the files from the tar.gz file, the following folder tree structure should appear:
+Download the source code from the [PyBetVH](https://github.com/INGV/PyBetVH) main page on the VHub web site (Download does not require to be registered users). Under the launch tool button on the right, by clicking on download, it will be asked to save a compressed file (betvh-rxxx.tar.gz). The archive must be placed in a folder where the user has full permissions (reading, writing and executing) on files. This will be the installation folder of [PyBetVH](https://github.com/INGV/PyBetVH) and should not be moved anymore. After having extracted the files from the tar.gz file, the following folder tree structure should appear:
 
 rob@robelix:downloads$ ls -hot betvh-rxxx
 total 68K
@@ -271,7 +271,7 @@ Input to feed PyBet tools consists in a set of text files organized in a main fo
 ### 5.1 PyBetVH
 -----------
 
-Many details on input preparation to [PyBetVH](http://vhub.org/resources/betvh) can be found in [Tonini et al. (2015)](http://www.sciencedirect.com/science/article/pii/S0098300415000515) main paper and in the relating supplementary material.
+Many details on input preparation to [PyBetVH](https://github.com/INGV/PyBetVH) can be found in [Tonini et al. (2015)](http://www.sciencedirect.com/science/article/pii/S0098300415000515) main paper and in the relating supplementary material.
 
 ### 5.2 PyBetEF
 -----------
@@ -438,19 +438,5 @@ The use of BET tools makes the user fully responsible of its input data, results
 13.    Tonini, R., Sandri, L., Costa, A., Selva, J. (2015b) Brief communication: the effect of submerged vents on probabilistic hazard assessment for tephra fallout. Nat. Hazards Earth Syst. Sci. 15, 409–415. [http://dx.doi.org/10.5194/nhess-15-409-2015](http://dx.doi.org/10.5194/nhess-15-409-2015). 
 14.    Tonini R., Sandri L., Rouwet D., Corentin C., Marzocchi W., Suparjan (2016) A new Bayesian Event Tree tool to track and quantify volcanic unrest and its application to Kawah Ijen volcano, Geochem. Geophys. Geosyst., 17, doi: 10.1002/2016GC006327 
 
-Created on 20 Oct 2015, Last modified on 01 Dec 2015
-
-### Tags
-
-1.   [Bayesian inference](https://theghub.org/tags/bayesianinference)
-2.   [BET_EF](https://theghub.org/tags/betef)
-3.   [bet_vh](https://theghub.org/tags/betvh)
-4.   [Event Tree](https://theghub.org/tags/eventtree)
-5.   [long term forecasting](https://theghub.org/tags/longtermforecasting)
-6.   [probabilistic volcanic hazard](https://theghub.org/tags/probabilisticvolcanichazard)
-7.   [PyBetEF](https://theghub.org/tags/pybetef)
-8.   [PyBetUnrest](https://theghub.org/tags/pybetunrest)
-9.   [pybetvh](https://theghub.org/tags/pybetvh)
-10.   [short term forecasting](https://theghub.org/tags/shorttermforecasting)
 
 
