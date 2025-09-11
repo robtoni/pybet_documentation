@@ -1,6 +1,7 @@
 # PyBet Tools User Guide
 
-URL Source (Created on 20 Oct 2015, Last modified on 01 Dec 2015): https://theghub.org/wiki/PyBetToolsUserGuide
+URL Source: https://theghub.org/wiki/PyBetToolsUserGuide
+(Created on 20 Oct 2015, Last modified on 01 Dec 2015)
 
 Table of contents
 -----------------
@@ -10,23 +11,23 @@ Table of contents
     *   [1.2 PyBetEF](#12-pybetef)
     *   [1.3 PyBetUnrest](#13-pybetunrest)
 
-*   [2. Background Theory](#2-background)
-    *   [2.1 Bayesian Inference](#21-bayesian)
+*   [2. Background Theory](#2-background-theory)
+    *   [2.1 Bayesian Inference](#21-bayesian-inference)
     *   [2.2 Monitoring](#22-monitoring)
 
-*   [3. Local Installation Requirements](#3-installation)
+*   [3. Installation Requirements](#3-installation-requirements)
     *   [3.1 Linux](#31-linux)
-    *   [3.2 Mac OSX/Windows](#32-macwin)
-    *   [3.3 Requirements verification](#33-requirements)
+    *   [3.2 Mac OSX and Windows](#32-mac-osx-and-win)
+    *   [3.3 Requirements verification](#33-requirements-verification)
 
-*   [4. Running the tools](#4-running)
-    *   [4.1 PyBetVH](#41-runpybetvh)
-    *   [4.2 PyBetEF](#42-runpybetef)
-    *   [4.3 PyBetUnrest](#43-runpybetunrest)
+*   [4. Running the tools](#4-running-the-tools)
+    *   [4.1 PyBetVH](#41-pybetvh)
+    *   [4.2 PyBetEF](#42-pybetef)
+    *   [4.3 PyBetUnrest](#43-pybetunrest)
 
-*   [5. Input preparation](#5-input)
-    *   [5.1 PyBetVH](#51-inputvh)
-    *   [5.2 PyBetEF](#52-inputef)
+*   [5. Input preparation](#5-input-preparation)
+    *   [5.1 PyBetVH](#51-pybetvh)
+    *   [5.2 PyBetEF](#52-pybetef)
 
 *   [Disclaimer](#disclaimer)
 *   [References](#references)
@@ -160,7 +161,7 @@ sudo apt-get install python-numpy python-matplotlib python-wxgtk3.0 python-pil
 
 The procedure for other distributions is very similar.
 
-### 3.2 Mac OSX/Windows
+### 3.2 Mac OSX and Windows
 -------------------
 
 Both these operating systems do not have a native package manager to handle libraries and softwares in a smart way as Linux distribution, so the installation of Python libraries could not be so straightforward. One can download and install the single libraries from the respective web sites, being very careful to the Python Standard Library version installed on his/her own computer as reference to choose the correct files. Moreover, Mac OSX users can try to use [MacPorts](https://theghub.org/wiki/MacPorts) ([https://www.macports.org/](https://www.macports.org/)) or Homebrew ([http://brew.sh/](http://brew.sh/)), depending on their own expertise in using these tools, which should play as package managers similarly to the ones available for Linux systems. Alternatively, as easiest way, one can install the Enthought Canopy free version [https://store.enthought.com](https://store.enthought.com/). Canopy is a very rich Python package distribution, which will install a scientific Python environment in your system. It is less flexible, but more solid and it takes care of the compatibility among all the libraries. Once you have installed Canopy (as any other software in your own operating system), one should set the Canopy Python environment as the default Python. Official instruction can be found for [Windows](http://docs.enthought.com/canopy/quick-start/install_windows.html) and [Mac OSX](http://docs.enthought.com/canopy/quick-start/install_macos.html).
