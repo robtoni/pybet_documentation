@@ -138,11 +138,13 @@ The value of P calculated by equation (*) is the mean of a Beta distribution. Th
 
 All PyBet tools require Python and some Python third party modules/libraries which need to be installed in order to be able to run the tools. The first step is to check if the Python interpreter is installed. By typing “python” in a terminal window followed by the Enter key, the prompt should give a similar response:
 
+```
 rob@robelix:~$ python
 Python 2.7.3 (default, Apr 20 2012, 22:39:59) 
 [GCC 4.6.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
+```
 
 The required additional modules/libraries are:
 
@@ -158,7 +160,9 @@ All of them are open source and freely available and usable for all the most com
 
 In the majority of Linux distributions, Python libraries can be easily installed by means of their own package managers, which install, update, remove softwares in the system in a consistent manner, by checking for all the required dependencies and shared libraries. For Debian-like distributions, you can use the synaptic tool or simply the following command from the terminal:
 
+```
 sudo apt-get install python-numpy python-matplotlib python-wxgtk3.0 python-pil  
+```
 
 The procedure for other distributions is very similar.
 
@@ -169,21 +173,25 @@ Both these operating systems do not have a native package manager to handle libr
 
 Note for Mac OSX users: if the above procedure does not set the Python Canopy environment as your default Python, you can manually set your .bash_profile as follows:
 
+```
 export PATH=/Users/$YOURUSERNAME/Library/Enthought/Canopy_64bit/User/bin:$PATH
-
+```
 When Canopy is set as your default Python environment, by running the python command from your terminal, you should get something similar:
 
+```
 macosx@macuser:~$ python
 Enthought Canopy Python 2.7.9 | 64-bit | (default, Jun 30 2015, 19:41:21) 
 [GCC 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.6)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
+```
 
 ### 3.3 Requirements verification
 -----------------------------
 
 Independently on the operating system you are using and on the method used to install these Python libraries, their correct installation can be verified by entering in the Python interactive shell and manually importing the libraries:
 
+```
 rob@robelix:~$ python
 Python 2.7.3 (default, Apr 20 2012, 22:39:59) 
 [GCC 4.6.3] on linux2
@@ -192,6 +200,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import matplotlib
 >>> import wx
 >>> from PIL import Image
+```
 
 If the previous requirements are satisfied, you can proceed with the installation of the tool(s) on your system.
 
@@ -203,6 +212,7 @@ If the previous requirements are satisfied, you can proceed with the installatio
 
 Download the source code from the [PyBetVH](https://github.com/INGV/PyBetVH) main page on the VHub web site (Download does not require to be registered users). Under the launch tool button on the right, by clicking on download, it will be asked to save a compressed file (betvh-rxxx.tar.gz). The archive must be placed in a folder where the user has full permissions (reading, writing and executing) on files. This will be the installation folder of [PyBetVH](https://github.com/INGV/PyBetVH) and should not be moved anymore. After having extracted the files from the tar.gz file, the following folder tree structure should appear:
 
+```
 rob@robelix:downloads$ ls -hot betvh-rxxx
 total 68K
 drwxr-xr-x 2 rob 4.0K Jan  8 22:04 bin
@@ -214,27 +224,37 @@ drwxr-xr-x 2 rob 4.0K Nov  9 19:01 middleware
 drwxr-xr-x 2 rob 4.0K Nov  9 19:01 rappture
 -rw-r--r-- 1 rob  723 Nov  9 19:01 LICENSE.txt
 -rw-r--r-- 1 rob  35K Nov  8 16:56 COPYING
+```
 
 This is the structure required by VHub repository. After having opened a terminal window and moved into src/ folder, it must be executed the following command:
 
+```
 rob@robelix:betvh-rxxx$ make install all
+```
 
 The command above installs all the executable files in the bin/ directory. Open a terminal and move inside the bin/ folder:
 
+```
 rob@robelix:~$ cd /yourpath/betvh-rxxx/bin
-
+```
 You can now launch the tool with:
 
+```
 rob@robelix:~$ python betvh.py
+```
 
 Depending on your operating system, you can now set a link to the main executable, which is in /yourpath/betvh-rxxx/bin/betvh.py. For example, in Linux and Mac OSX platforms:
 
+```
 rob@robelix:~$ chmod u+x /yourpath/betvh-rxxx/bin/betvh.py  
 rob@robelix:~$ ln -s /yourpath/betvh-rxxx/bin/betvh.py /somewhereinyourPATH/PyBetVH
+```
 
 Finally, if all the operations above have been successfully concluded, the tool can be launched by simply doing, from any position in your file system, in the terminal window:
 
+```
 rob@robelix:~$ PyBetVH
+```
 
 ### 4.2 PyBetEF
 -----------
