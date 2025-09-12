@@ -1,8 +1,7 @@
 # PyBet Tools User Guide
 
-URL Source: https://theghub.org/wiki/PyBetToolsUserGuide
+URL Source (created on 20 Oct 2015): https://theghub.org/wiki/PyBetToolsUserGuide
 
-(Created on 20 Oct 2015, Last modified on 01 Dec 2015)
 
 Table of contents
 -----------------
@@ -459,6 +458,7 @@ The use of BET tools makes the user fully responsible of its input data, results
 12.    Tonini R, Sandri L, Thompson MA (2015a) PyBetVH: a Python tool for probabilistic volcanic hazard assessment and for generation of Bayesian hazard curves and maps. Comput Geosci 79:38–46 
 13.    Tonini, R., Sandri, L., Costa, A., Selva, J. (2015b) Brief communication: the effect of submerged vents on probabilistic hazard assessment for tephra fallout. Nat. Hazards Earth Syst. Sci. 15, 409–415. [http://dx.doi.org/10.5194/nhess-15-409-2015](http://dx.doi.org/10.5194/nhess-15-409-2015). 
 14.    Tonini R., Sandri L., Rouwet D., Corentin C., Marzocchi W., Suparjan (2016) A new Bayesian Event Tree tool to track and quantify volcanic unrest and its application to Kawah Ijen volcano, Geochem. Geophys. Geosyst., 17, doi: 10.1002/2016GC006327 
+
 
 
 
