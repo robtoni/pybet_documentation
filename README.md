@@ -40,7 +40,7 @@ BET models are a set of probabilistic tools aiming to provide probabilistic esti
 
 Here we present some of the current software implementations of these models, with the specific goal of providing a user-friendly interface to the final users. The softwares have been developed by using the Python programming language, since the broad compatibility of Python allows to install them on all the most common operating systems (Linux, Mac OSX, Windows) and also on the [VHub](https://vhub.org/) cyber-infrastructure, where they can be freely run online or downloaded. In the next sub-sections they are briefly introduced.
 
-More details on the BET’s models background theory can be found in literature (among others see Marzocchi et al., 2004; Marzocchi et al., 2008, Marzocchi et al., 2010) and are out of the scope of this document. However, some basic principles will be briefly introduced in the [next section 2](#background), in order to properly approach the use of the corresponding tools.
+More details on the BET’s models background theory can be found in literature (among others see Marzocchi et al., 2004; Marzocchi et al., 2008, Marzocchi et al., 2010) and are out of the scope of this document. However, some basic principles will be briefly introduced in the [next section 2](#2-background-theory), in order to properly approach the use of the corresponding tools.
 
 ### 1.1 PyBetVH
 -----------
@@ -266,7 +266,7 @@ then launch the tool:
 
 rob@robelix:~$ python PyBetEF.py
 
-There are several ways to make this operation faster. In Linux and Mac OSX systems, as illustrative example, one can make the [PyBetEF](https://theghub.org/wiki/PyBetEF).py main program file executable and then create a (symbolic) link to it in a folder belonging to its PATH environment variable:
+There are several ways to make this operation faster. In Linux and Mac OSX systems, as illustrative example, one can make the PyBetEF.py main program file executable and then create a (symbolic) link to it in a folder belonging to its PATH environment variable:
 
 rob@robelix:~$ chmod u+x /yourpath/PyBetEF/PyBetEF.py  
 rob@robelix:~$ ln -s /yourpath/PyBetEF/PyBetEF.py /somewhereinyourPATH/PyBetEF
@@ -458,6 +458,7 @@ The use of BET tools makes the user fully responsible of its input data, results
 12.    Tonini R, Sandri L, Thompson MA (2015a) PyBetVH: a Python tool for probabilistic volcanic hazard assessment and for generation of Bayesian hazard curves and maps. Comput Geosci 79:38–46 
 13.    Tonini, R., Sandri, L., Costa, A., Selva, J. (2015b) Brief communication: the effect of submerged vents on probabilistic hazard assessment for tephra fallout. Nat. Hazards Earth Syst. Sci. 15, 409–415. [http://dx.doi.org/10.5194/nhess-15-409-2015](http://dx.doi.org/10.5194/nhess-15-409-2015). 
 14.    Tonini R., Sandri L., Rouwet D., Corentin C., Marzocchi W., Suparjan (2016) A new Bayesian Event Tree tool to track and quantify volcanic unrest and its application to Kawah Ijen volcano, Geochem. Geophys. Geosyst., 17, doi: 10.1002/2016GC006327 
+
 
 
 
