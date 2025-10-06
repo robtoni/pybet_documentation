@@ -17,7 +17,7 @@ Table of contents
 
 *   [3. Installation Requirements](#3-installation-requirements)
     *   [3.1 Linux](#31-linux)
-    *   [3.2 Mac OSX and Windows](#32-mac-osx-and-win)
+    *   [3.2 Mac OSX and Windows](#32-mac-osx-and-windows)
     *   [3.3 Requirements verification](#33-requirements-verification)
 
 *   [4. Running the tools](#4-running-the-tools)
@@ -68,7 +68,7 @@ More details on [PyBetUnrest](https://github.com/INGV/PyBetUnrest) tool can be f
 
 The main concepts behind BET models are the definition of an event tree (ET, hereafter) and the use of the Bayesian inference. ET is a tree graph representation of events in which individual branches are alternative steps from a general prior event, state, or condition through increasingly specific subsequent events (intermediate outcomes) to final outcomes (see Figure 1). In this way, an ET shows all relevant possible outcomes of volcanic unrest at progressively higher degrees of detail. The branches at each node represent different possible events, although these need not be mutually exclusive or exhaustive. The Bayesian approach is used at the different nodes to merge theoretical models of the eruptive process, past (historical and geological) data, and, for short-term forecasting, data from monitoring of the volcano. Thus it allows to formally account for both aleatoric (due to the intrinsic randomness of the system) and epistemic (due to limited data or knowledge) uncertainties. Through the ET, one can calculate both absolute and conditional probability. This corresponds to consider the selected full path or just a single node in the ET itself.
 
-[![Image 1: 2004-marzocchi_et_al-jgr.png](https://theghub.org/wiki/PyBetToolsUserGuide/Image:2004-marzocchi_et_al-jgr.png)](https://theghub.org/wiki/PyBetToolsUserGuide/Image:2004-marzocchi_et_al-jgr.png)
+![Image 1: 2004-marzocchi_et_al-jgr.png](img/2004-marzocchi_et_al-jgr.png)
 
 **Figure 1:** Example of event tree as designed after Marzocchiet al. (2004) for Mount Vesuvius.
 
@@ -87,7 +87,7 @@ where:
 
 In the BET model, both prior and posterior have a Beta distribution.
 
-[![Image 2: bayesian_inference.png](https://theghub.org/wiki/PyBetToolsUserGuide/Image:bayesian_inference.png)](https://theghub.org/wiki/PyBetToolsUserGuide/Image:bayesian_inference.png)
+![Image 2: bayesian_inference.png](img/bayesian_inference.png)
 
 **Figure 2:** Bayesian inference: posterior distribution as result of prior model updated through available observed data.
 
@@ -102,7 +102,7 @@ The nature of the Bayesian analysis procedure can be summarized by the following
 
 Monitoring data are accounted by identifying all the monitored parameters that can provide information about a degree of anomaly at each node of the ET. The identification of anomalies is where volcanologists introduce their conceptual models about the pre-eruptive process. The degrees of anomaly of each measure is computed in two ways (see Figure 3 here below): the parameter’s anomaly can be defined as binary (exceedance of one threshold), as shown in the left panel of Figure 3, or through a fuzzy approach (by defining two thresholds), as shown in the right panel of Figure 3.
 
-[![Image 3: thresholds.png](https://theghub.org/wiki/PyBetToolsUserGuide/Image:thresholds.png)](https://theghub.org/wiki/PyBetToolsUserGuide/Image:thresholds.png)
+![Image 3: thresholds.png](img/thresholds.png)
 
 **Figure 3:** Definition of parameters’ thresholds
 
@@ -122,7 +122,7 @@ H = – ln(1-P) = -(a′ – bZ)
 
 The parameter a and b can be defined for any volcanic systems, since their meaning is strictly connected to specific configuration of the local monitoring network and the expert’s beliefs on the selected volcano.
 
-[![Image 4: anomaly.png](https://theghub.org/wiki/PyBetToolsUserGuide/Image:anomaly.png)](https://theghub.org/wiki/PyBetToolsUserGuide/Image:anomaly.png)
+![Image 4: anomaly.png](img/anomaly.png)
 
 **Figure 4:**
 
@@ -132,7 +132,7 @@ The parameter a and b can be defined for any volcanic systems, since their meani
 
 The value of P calculated by equation (*) is the mean of a Beta distribution. The variance of the distribution is set by the parameter **Λ** that is the **equivalent number of data**. The **equivalent number of data** mimics how much we believe to the conceptual model that stands behind the choice of the anomalies. In other words, if we set Λ=5 we think that our model has the same credibility that we can get from a probability calculated from 5 data. Of course the larger Λ , the higher the confidence on the model.
 
-## 3. Local Installation Requirements
+## 3. Installation Requirements
 ----------------------------------
 
 All PyBet tools require Python and some Python third party modules/libraries which need to be installed in order to be able to run the tools. The first step is to check if the Python interpreter is installed. By typing “python” in a terminal window followed by the Enter key, the prompt should give a similar response:
@@ -260,20 +260,28 @@ rob@robelix:~$ PyBetVH
 
 PyBetEF is not yet installed on VHub. You can download it from [here](https://www.dropbox.com/s/oc4e3lrvjw84qoz/PyBetEF.zip?dl=0) together with a working [example](https://www.dropbox.com/s/2d1bjhcgfhyou86/FakeVolcano.zip?dl=0). Uncompress the .zip file and place the whole folder where you prefer. The folder contains the PyBetEF main program and all the modules needed to be properly executed. The user should not modify, remove or do any change to this folder, since the risk is to compromise the functionality of the tool. The tool is ready to be launched for a first trial. Open a terminal and move inside the folder containing the PyBetEF source files:
 
+```
 rob@robelix:~$ cd /your/path/to/PyBetEF/folder/
+```
 
 then launch the tool:
 
+```
 rob@robelix:~$ python PyBetEF.py
+```
 
 There are several ways to make this operation faster. In Linux and Mac OSX systems, as illustrative example, one can make the PyBetEF.py main program file executable and then create a (symbolic) link to it in a folder belonging to its PATH environment variable:
 
+```
 rob@robelix:~$ chmod u+x /yourpath/PyBetEF/PyBetEF.py  
 rob@robelix:~$ ln -s /yourpath/PyBetEF/PyBetEF.py /somewhereinyourPATH/PyBetEF
+```
 
 In this way one should be able to run the tool from any place of her/his filesystem by opening a terminal and simply doing:
 
+```
 rob@robelix:~$ PyBetEF 
+```
 
 In Windows one can create a link (i.e., on the Desktop) by clicking with the mouse’s right button ans selecting create a link. Then double click on the link should directly launch the tool.
 
@@ -299,6 +307,7 @@ Many details on input preparation to [PyBetVH](https://github.com/INGV/PyBetVH) 
 
 Example of _pybet.cfg_
 
+```
 [Main Settings]
 volcano name = Fake Volcano
 volcano center = 562164, 5115607
@@ -339,6 +348,7 @@ file name monitoring = node_vent_monitoring.txt/None
 node 4-5 dependence = False
 n. sizes = 4
 file name = node_style.txt
+```
 
 *   **Block “Main Settings”**
     1.    “volcano name =”: the user should add volcano name 
@@ -458,6 +468,7 @@ The use of BET tools makes the user fully responsible of its input data, results
 12.    Tonini R, Sandri L, Thompson MA (2015a) PyBetVH: a Python tool for probabilistic volcanic hazard assessment and for generation of Bayesian hazard curves and maps. Comput Geosci 79:38–46 
 13.    Tonini, R., Sandri, L., Costa, A., Selva, J. (2015b) Brief communication: the effect of submerged vents on probabilistic hazard assessment for tephra fallout. Nat. Hazards Earth Syst. Sci. 15, 409–415. [http://dx.doi.org/10.5194/nhess-15-409-2015](http://dx.doi.org/10.5194/nhess-15-409-2015). 
 14.    Tonini R., Sandri L., Rouwet D., Corentin C., Marzocchi W., Suparjan (2016) A new Bayesian Event Tree tool to track and quantify volcanic unrest and its application to Kawah Ijen volcano, Geochem. Geophys. Geosyst., 17, doi: 10.1002/2016GC006327 
+
 
 
 
