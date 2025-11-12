@@ -1,6 +1,6 @@
 # PyBet Tools User Guide
 
-URL Source (created on 20 Oct 2015): https://theghub.org/wiki/PyBetToolsUserGuide
+Original URL Source (created on 20 Oct 2015): https://theghub.org/wiki/PyBetToolsUserGuide
 
 
 Table of contents
